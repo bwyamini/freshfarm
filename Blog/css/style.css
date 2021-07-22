@@ -1,0 +1,538 @@
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: 'Montserrat', serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  position: relative;
+  font-family: "Montserrat", serif;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-family: 'Montserrat',serif;
+}
+
+nav {
+  background: white;
+  height: 100px;
+  width: 100%;
+  z-index: 1;
+  top: 0px;
+  border-bottom: 2px solid green;
+}
+
+.logo {
+  padding-top: 8px;
+  padding-left: 20px;
+}
+
+
+nav ul {
+  font-family: 'Montserrat', serif;
+  font-weight: 500;
+  margin-top: 28px;
+  font-size: 20px;
+  float: right;
+
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 30px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: orange;
+  font-size: 17px;
+  padding-bottom: 3px;
+  padding-top: 12px ;
+  padding-left:12px;
+  padding-right: 12px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+nav ul li a.active {
+  border-bottom: 3px solid orange;
+}
+
+a.active, a:hover {
+  background: white;
+  transition: .5s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: green;
+  float: right;
+  line-height: 100px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+  height: 50px;
+}
+
+#check {
+  display: none;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: Orange;
+  text-align: center;
+  padding: 12px 10px;
+  text-decoration: none;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 40px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 10px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #FFA33E;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media (max-width: 952px) {
+  .logo {
+    font-size: 30px;
+    padding-left: 10px;
+    height: 90px;
+    width: 180px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+    font-size: 30px;
+    height: 40px;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    top: 80px;
+    left: -100%;
+    padding-top: 20px;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 19px 0;
+    line-height: 19px;
+  }
+
+  li.dropdown {
+    margin: 19px 0;
+    line-height: 19px;
+    margin-top: 0px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  a.active {
+    background: none;
+    color: black;
+  }
+
+  #check:checked~ul {
+    left: 0;
+    z-index: 1;
+  }
+}
+
+.blog{
+  margin-bottom: 20px;
+}
+
+.blog .header--text {
+  text-align: center;
+  padding-top:0px;
+  padding-bottom:8px;
+  padding-top: 45px;
+}
+.heading
+{
+  font-size: 50px;
+  font-weight: 600;
+  font-family: serif;
+  color:green;
+}
+
+.blog .header--text h2 {
+  color:#0f9350;
+  position: relative;
+  margin: 0 0 4px 0;
+  font-size: 35px;
+  font-weight: bold;
+  padding: 20px 0 18px 0;
+
+}
+.blog .blog--content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+ .content {
+  width: 400px;
+  border: 2px solid green;
+  position: relative;
+  margin: 15px;
+  transition: all 0.4s;
+}
+
+.blog--content .content:hover {
+  box-shadow: 0 6px 12px rgba(202, 202, 202, 0.2);
+}
+
+.blog--content .content .content__photo {
+  height: 290px;
+  overflow: hidden;
+}
+
+.blog--content .content .content__photo img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+}
+
+.blog--content .content .content__photo img:hover {
+  transform: scale(1.2);
+}
+
+ .text--content {
+  padding: 0px 10px;
+}
+.text
+{
+  font-family:'Montserrat',serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-align:justify;
+  margin-bottom: 5px;
+
+}
+
+ h4 {
+  font-size:17px;
+  font-family: "Montserrat",serif;
+  font-weight: 400;
+  color:#0f9350;
+  font-weight: bold;
+ line-height: 1;
+ padding-top: 18px;
+ padding-bottom:8px;
+ margin-bottom: 0px;
+}
+
+
+
+.text--content .btn {
+
+   text-align:right;
+   padding-left: 280px;
+    padding-bottom: 5px;
+  }
+  .blog--content .content .text--content .btn a {
+
+    color: #0f9350;
+    font-size: 15px;
+    display: inline-block;
+    position:relative;
+    text-decoration: underline;
+
+  }
+
+/*inner html*/
+
+.content1 b{
+  margin-top: 20px;
+  font-family: 'Montserrat',serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+.content1 p{
+  font-family: 'Montserrat',serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.2;
+  padding-bottom: 15px;
+
+}
+
+
+
+
+@media only screen and (max-width: 1080px) {
+  .blog--content .content .text--content h4 {
+    font-size: 32px;
+  }
+
+  .blog--content .content .text--content .btn a:link,
+  .blog--content .content .text--content .btn a:visited {
+    font-size: 18px;
+  }
+
+
+  .description-container p {
+    float: none;
+    margin-left: 0px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .blog--content .content .text--content h4 {
+    font-size: 25px;
+  }
+
+  .blog--content .content .text--content .btn a:link,
+  .blog--content .content .text--content .btn a:visited {
+    font-size:12px;
+  }
+
+
+  .description-container p {
+    float: none;
+    margin-left: 0px;
+    width: 100%;
+  }
+}
+/*inner-html-styles*/
+
+.description-container {
+  max-width:100%;
+  padding: 0px 70px;
+}
+h3
+{
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.container-mid {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.content1{
+  padding-top: 20px;
+
+}
+
+.description-container  p {
+
+  text-align: justify;
+  display: block;
+  font-size:17px;
+    color: #444;
+    font-family: 'Montserrat',serif;
+    font-weight: 400;
+    line-height: 1.8;
+
+}
+.description-container  h3 {
+text-align: center;
+font-size: 30px;
+color:#444;
+margin:5px;
+
+
+}
+
+.description-container .floating-image {
+  max-width:500px;
+}
+
+
+
+/* footer section */
+.footer-sec {
+  background-color: Black;
+  color: white;
+}
+
+.footer {
+  padding: 30px;
+  text-align: left;
+}
+
+#div-row {
+  padding-top: 30px;
+}
+
+.contact {
+  text-align: left;
+  color: orange;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+#text-link a:hover {
+  color: orange;
+}
+
+#icon {
+  vertical-align: middle;
+}
+
+.sub-info {
+  padding-top: 5px;
+  text-align: left;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+.list-line {
+  padding-top: 0px;
+  margin-bottom: 0px;
+}
+
+.sub-info1 {
+  padding-top: 0px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.no {
+  color: white;
+  padding-left: 5px;
+  padding-right: 0px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+}
+
+a:hover {
+  color: orange;
+  background: none;
+  color: inherit
+}
+
+.links a:hover {
+  color: orange;
+}
+
+.center {
+  padding-left: 80px;
+}
+
+.card {
+  padding-top: 10px;
+  padding-left: 20px;
+  height: 330px;
+  width: 280px;
+  background-color: black;
+  border: 2px solid white;
+}
+
+.input-container {
+  border-radius: 50%;
+  padding-top: 5px;
+  color: orange;
+}
+
+.label {
+  padding-left: 5px;
+  margin-bottom: 0px;
+}
+
+.txt {
+  text-align: left;
+  padding-left: 5px;
+  font-size: 15px;
+  font-weight: lighter;
+  padding-bottom: 0px;
+}
+
+.input-field {
+  padding-top: 10px;
+  height: 25px;
+  width: 90%;
+}
+
+.abt-us:link, .abt-us:visited {
+  background-color: Orange;
+  border-radius: 10px;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid white;
+}
+
+.abt-us:hover, .abt-us:active {
+  background-color: #F7CE68;
+  ;
+}
+
+.social {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.soc-icon {
+  margin: 20px 10px;
+  padding: 5px;
+  text-align: center;
+  color: white;
+}
+
+.soc-icon:hover {
+  color: orange;
+}
+@media screen and (max-width:480px){
+
+nav ul{
+  margin-top: 19px;
+}
+@media screen and (max-width:360px){
+.mid{
+  padding-left: 10px;
+}

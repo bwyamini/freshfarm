@@ -1,0 +1,476 @@
+/*NAVBAR*/
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: 'Montserrat', serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  position: relative;
+  font-family: "Montserrat", serif;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-family: 'Montserrat'
+}
+
+nav {
+  background: white;
+  height: 100px;
+  width: 100%;
+  z-index: 1;
+  top: 0px;
+  border-bottom: 2px solid green;
+}
+
+.logo {
+  padding-top: 8px;
+  padding-left: 20px;
+}
+
+
+nav ul {
+  font-family: 'Montserrat', serif;
+  font-weight: 500;
+  margin-top: 28px;
+  font-size: 20px;
+  float: right;
+
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 30px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: orange;
+  font-size: 17px;
+  padding-bottom: 3px;
+  padding-top: 12px ;
+  padding-left:12px;
+  padding-right: 12px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+nav ul li a.active {
+  border-bottom: 3px solid orange;
+}
+
+a.active, a:hover {
+  background: white;
+  transition: .5s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: green;
+  float: right;
+  line-height: 100px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+  height: 50px;
+
+}
+
+#check {
+  display: none;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: Orange;
+  text-align: center;
+  padding: 12px 10px;
+  text-decoration: none;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 40px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 10px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #FFA33E;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media (max-width: 952px) {
+  .logo {
+    font-size: 30px;
+    padding-left: 10px;
+    height: 90px;
+    width: 180px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+
+    font-size: 30px;
+    height: 40px;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    top: 80px;
+    left: -100%;
+    padding-top: 20px;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 19px 0;
+    line-height: 19px;
+  }
+
+  li.dropdown {
+    margin: 19px 0;
+    line-height: 19px;
+    margin-top: 0px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  a.active {
+    background: none;
+    color: black;
+  }
+
+  #check:checked~ul {
+    left: 0;
+    z-index: 1;
+  }
+}
+.image{
+  top:0px;
+  margin-top: -150px;
+  z-index:-1;
+}
+.container
+{
+  margin-top:5px;
+  text-align: center;
+ z-index:0;
+ padding-top:10px;
+ padding-bottom: 30px;
+ padding-left: 50px;
+ padding-right: 50px;
+}
+
+.heading
+{
+  font-family:'Montserrat',serif;
+  font-weight: 400;
+  padding-top:30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.sub-info{
+  padding-top:20px;
+  font-family: 'Montserrat',serif;
+  font-weight: 400;
+  font-size: 15px;
+
+}
+.col-lg-6
+{
+}
+.row{
+  text-align: left;
+  padding-top:10px;
+  padding-bottom: 10px;
+}
+.row-2
+{
+  text-align: left;
+  padding-top:0px;
+  padding-left:3%;
+}
+.text{
+  padding-bottom: 20px;
+}
+.box{
+  height:40px;
+  width:300px;
+}
+.left-text
+{
+  padding-right:10px;
+}
+.box
+{
+  padding-left: 10px;
+  height: 40px;
+    width: 95%;
+}
+.form-label{
+    margin: 20px;
+}
+.name{
+  font-family: 'Montserrat',serif;
+  font-weight:600;
+  font-size: 15px;
+
+}
+.signin{
+    text-align: left;
+    padding-top: 20px;
+    font-weight:400;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.signin p
+{
+  font-family: 'Montserrat',serif;
+  font-weight:400;
+  font-size: 15px;
+
+}
+.signin b
+ {
+  font-family: 'Montserrat',serif;
+  font-weight:600;
+  font-size: 18px;
+  }
+.signin a{
+  font-family:"Montserrat",serif;
+  font-size: 20px;
+  font-weight: 400;
+  padding-left: 5px;
+  text-decoration: underline;
+  color:orange;
+}
+
+.carousel-card-container{
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-radius: 25px;
+}
+
+.carousel-img{
+    height: 250px;
+    width:50px ;
+}
+.button1
+{
+  padding-top:30px;
+   padding-bottom:30px;
+}
+
+.btn1{
+    background-color:green;
+    color: #ffffff;
+    border-radius: 10px;
+    height: 36px;
+    width: 171px;
+    border: 0px;
+    padding-bottom:20px;
+    font-size:18px;
+    font-weight: bold;
+    border: none;
+
+}
+.btn1:hover{
+  border-style:none;
+}
+.form-label{
+    margin-left: 0px;
+    margin-top: 5px;
+}
+
+
+
+@media screen and (min-width:480px) and (max-width:1028px)
+{
+  .card
+  {
+    margin-left: 0px;
+  }
+}
+
+
+
+/*footer*/
+.footer-sec
+{
+  background-color:Black;
+  color:white;
+}
+
+.footer
+{
+  padding:30px;
+  text-align:left;
+
+}
+#div-row{
+  padding-top: 30px;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: 'Montserrat',sans-serif;
+}
+.contact{
+  padding-top: 10px;
+  text-align: left;
+  color:orange;
+}
+.list-line{
+  list-style-type: none;
+  padding:0px;
+  margin:0px;
+}
+#text-link a:hover{
+  color:orange;
+}
+#icon{
+  vertical-align: middle;
+}
+.sub-info
+{
+  padding-top: 10px;
+  text-align:left;
+  text-decoration: none;
+}
+.no{
+  color:white;
+}
+ a:hover{
+  color:orange;
+  background:none;
+  color:inherit
+
+}
+.links a:hover{
+  color:orange;
+}
+
+.center{
+
+  padding-left: 80px;
+}
+
+.card{
+padding-top: 10px;
+padding-left: 20px;
+  height:330px;
+  width:280px;
+background-color: black;
+border:2px solid white;
+}
+
+.input-container
+{
+border-radius: 50%;
+  padding-top:5px;
+  color:orange;
+
+}
+.label{
+  padding-left: 5px;
+  margin-bottom: 0px;
+}
+
+.txt
+{
+
+  text-align: left;
+  padding-left:5px;
+  font-size:15px;
+  font-weight: lighter;
+  padding-bottom: 0px;
+
+}
+
+
+.input-field
+{
+
+
+  height:25px;
+  width:90%;
+
+}
+.button{
+
+  width:35%;
+  color:white;
+  border:1px solid white;
+  background-color: orange;
+}
+.button:hover{
+  color:white;
+  background-color: orange;
+
+}
+.social
+{
+
+  text-align: center;
+  padding-top:20px;
+  padding-bottom: 30px;
+}
+.soc-icon {
+  margin: 20px 10px;
+  padding:5px;
+  text-align: center;
+  color: white;
+}
+.soc-icon:hover{
+  color:orange;
+}
+@media screen and (max-width:480px){
+nav ul{
+  margin-top: 19px;
+}
+}
+@media screen and (min-width:480px){
+.mid{
+  padding-left: 10px;
+}
+}

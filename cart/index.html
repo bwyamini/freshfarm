@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap|Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet">
+  <!--fontawesome-->
+  <script src="https://kit.fontawesome.com/e4fa7fcfdb.js" crossorigin="anonymous"></script>
+
+<!--css stylesheets-->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--bootstrap scripts-->
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!--scroll-scripts-->
+<script type="text/javascript">
+!function(t,e){t.artibotApi={l:[],t:[],on:function(){this.l.push(arguments)},trigger:function(){this.t.push(arguments)}};var a=!1,i=e.createElement("script");
+i.async=!0,i.type="text/javascript",i.src="https://app.artibot.ai/loader.js",e.getElementsByTagName("head").item(0).appendChild(i),i.onreadystatechange=i.onload=function(){if(!(a||this.readyState&&"loaded"!=this.readyState&&"complete"!=this.readyState))
+{new window.ArtiBot({i:"f5c005ca-5faf-4593-b380-2ce4cb062dc4"});a=!0}}}
+(window,document);
+</script>
+<style>
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 0px;
+  margin:0px;
+
+}
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: 'Montserrat', serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  position: relative;
+  font-family: "Montserrat", serif;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-family: 'Montserrat'
+}
+
+nav {
+  background: white;
+  height: 100px;
+  width: 100%;
+  z-index: 1;
+  top: 0px;
+  border-bottom: 2px solid green;
+}
+
+.logo {
+  padding-top: 8px;
+  padding-left: 20px;
+}
+
+
+nav ul {
+  font-family: 'Montserrat', serif;
+  font-weight: 500;
+  margin-top: 28px;
+  font-size: 20px;
+  float: right;
+
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 30px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: orange;
+  font-size: 17px;
+  padding-bottom: 3px;
+  padding-top: 12px ;
+  padding-left:12px;
+  padding-right: 12px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+nav ul li a.active {
+  border-bottom: 3px solid orange;
+}
+
+a.active, a:hover {
+  background: white;
+  transition: .5s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: green;
+  float: right;
+  line-height: 100px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+  height: 50px;
+}
+
+#check {
+  display: none;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: Orange;
+  text-align: center;
+  padding: 12px 10px;
+  text-decoration: none;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 40px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 10px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #FFA33E;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media (max-width: 952px) {
+  .logo {
+    font-size: 30px;
+    padding-left: 10px;
+    height: 90px;
+    width: 180px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+    font-size: 30px;
+    height: 40px;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    top: 80px;
+    left: -100%;
+    padding-top: 20px;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 19px 0;
+    line-height: 19px;
+  }
+
+  li.dropdown {
+    margin: 19px 0;
+    line-height: 19px;
+    margin-top: 0px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  a.active {
+    background: none;
+    color: black;
+  }
+
+  #check:checked~ul {
+    left: 0;
+    z-index: 1;
+  }
+}
+/* footer section */
+.footer-sec {
+  background-color: Black;
+  color: white;
+}
+
+.footer {
+  padding: 30px;
+  text-align: left;
+}
+
+#div-row {
+  padding-top: 30px;
+}
+
+.contact {
+  text-align: left;
+  color: orange;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+#text-link a:hover {
+  color: orange;
+}
+
+#icon {
+  vertical-align: middle;
+}
+
+.sub-info {
+  padding-top: 5px;
+  text-align: left;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+.list-line {
+  padding-top: 0px;
+  margin-bottom: 0px;
+}
+
+.sub-info1 {
+  padding-top: 0px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.no {
+  color: white;
+  padding-left: 5px;
+  padding-right: 0px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+}
+
+a:hover {
+  color: orange;
+  background: none;
+  color: inherit
+}
+
+.links a:hover {
+  color: orange;
+}
+
+.center {
+  padding-left: 80px;
+}
+
+.card {
+  padding-top: 10px;
+  padding-left: 20px;
+  height: 330px;
+  width: 280px;
+  background-color: black;
+  border: 2px solid white;
+}
+
+.input-container {
+  border-radius: 50%;
+  padding-top: 5px;
+  color: orange;
+}
+
+.one {
+  padding-left: 5px;
+  margin-bottom: 0px;
+}
+
+.txt {
+  text-align: left;
+  padding-left: 5px;
+  font-size: 15px;
+  font-weight: lighter;
+  padding-bottom: 0px;
+}
+
+.fix {
+  padding-top: 10px;
+  height: 25px;
+  width: 90%;
+}
+
+.abt-us:link, .abt-us:visited {
+  background-color: Orange;
+  border-radius: 10px;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid white;
+}
+
+.abt-us:hover, .abt-us:active {
+  background-color: #F7CE68;
+  ;
+}
+
+.social {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.soc-icon {
+  margin: 20px 10px;
+  padding: 5px;
+  text-align: center;
+  color: white;
+}
+
+.soc-icon:hover {
+  color: orange;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+.header{
+  padding-top: 20px;
+}
+
+.header p{
+  font-size: 40px;
+  font-family: sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color:Orange;
+}
+
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+  padding-top: 20px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+
+background-color: #B1D056;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+.ip {
+  width: 90%;
+  margin-bottom: 10px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+  font-family: 'Montserrat',serif;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: orange;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+.img{
+  margin-top: 0px;
+
+}
+
+.required:after
+{
+    color: red;
+    content: " *";
+}
+.full{
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+</style>
+</head>
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <img class="logo" src="../images/logo-2 crop.png" height="90px" width="230px" alt="logo">
+
+
+    <ul>
+      <li class="dropdown">
+        <a  href="../index.html" class="dropbtn">Home <i class="fa fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="../about-us/index.html">About Us</a>
+
+        </div>
+      </li>
+      <li><a href="../shop/index.html">Shop</a></li>
+      <li><a href="../Blog/index.html">Blog</a></li>
+
+
+      <li><a href="../news/index.html">News</a></li>
+
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Sign Up <i class="fa fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="../cust reg/index1.html">Customer</a>
+          <a href="../far reg/far index.html">Farmer</a>
+        </div>
+      </li>
+      <li><a href="../login/index3.html">Login</a></li>
+      <li> <a class="active" href="#">
+          <img src="../icons/cart.png" height="30px" ,width="30px" /></a>
+      </li>
+    </ul>
+  </nav>
+
+
+
+  <section>
+
+
+
+<div class="row full">
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
+
+        <div class="row">
+          <div class="col-50">
+            <h3>Shipping Address</h3>
+             <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input  class="ip" type="text" id="fname" name="firstname" placeholder="your Name" required>
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input class="ip" type="text" id="email" name="email" placeholder="Your Mail" required>
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input class="ip" type="text" id="adr" name="address" placeholder="Your Address" required>
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input class="ip" type="text" id="city" name="city" placeholder="Enter Your City" required>
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input class="ip" type="text" id="state" name="state" placeholder="select your State" required>
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input class="ip" type="text" id="zip" name="your Pincode" placeholder="10001" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input  class="ip"type="text" id="cname" name="cardname" placeholder="Priyanka Boddeti" required>
+            <label for="ccnum">Credit card number</label>
+            <input class="ip" type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required>
+            <label for="expmonth">Exp Month</label>
+            <input class="ip" type="text" id="expmonth" name="expmonth" placeholder="September" required>
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input class="ip" type="text" id="expyear" name="expyear" placeholder="2021" required>
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+
+                <input class="ip" type="text" id="cvv" name="cvv" placeholder=" CVV eg:352" required>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <input type="submit" value="Continue to checkout" class="btn">
+      </form>
+    </div>
+  </div>
+  <div class="col-25">
+    <div class="container">
+      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+      <p><a href="../shop/index.html/#product1">Product 1</a> <span class="price">45</span></p>
+      <p><a href="#">Product 2</a> <span class="price">50</span></p>
+      <p><a href="#">Product 3</a> <span class="price">35</span></p>
+      <p><a href="#">Product 4</a> <span class="price">15</span></p>
+      <hr>
+      <p>Total <span class="price" style="color:black"><b>140</b></span></p>
+    </div>
+  </div>
+</div>
+  </section>
+
+<script src="skrollr.js"></script>
+<script type="text/javascript">
+  var s = skrollr.init();
+  </script>
+</body>
+</html>
